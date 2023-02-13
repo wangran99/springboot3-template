@@ -1,0 +1,17 @@
+2023-02-13 13:42:11 [restartedMain] INFO  c.l.s.Springboot3TemplateApplication - Starting Springboot3TemplateApplication using Java 17.0.1 with PID 23804 (D:\code_space\springboot3-template\target\classes started by wangran in D:\code_space\springboot3-template)
+2023-02-13 13:42:11 [restartedMain] INFO  c.l.s.Springboot3TemplateApplication - The following 1 profile is active: "dev"
+2023-02-13 13:42:12 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-13 13:42:12 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-13 13:42:13 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http)
+2023-02-13 13:42:13 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2023-02-13 13:42:13 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-13 13:42:13 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-13 13:42:13 [restartedMain] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/rest] - Initializing Spring embedded WebApplicationContext
+2023-02-13 13:42:13 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1322 ms
+2023-02-13 13:42:13 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-02-13 13:42:13 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2023-02-13 13:42:13 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '/rest'
+2023-02-13 13:42:13 [restartedMain] INFO  c.l.s.Springboot3TemplateApplication - Started Springboot3TemplateApplication in 2.562 seconds (process running for 4.911)
+2023-02-13 13:42:18 [http-nio-8088-exec-1] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/rest] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-13 13:42:18 [http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-02-13 13:42:18 [http-nio-8088-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms

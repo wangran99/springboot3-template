@@ -1,0 +1,6 @@
+2023-02-03 18:55:40 [http-nio-8088-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.laowang.springboot3template.exception.ForbiddenException: 没有权限，访问被拒绝]
+2023-02-03 18:55:41 [http-nio-8088-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.laowang.springboot3template.exception.ForbiddenException: 没有权限，访问被拒绝]
+2023-02-03 19:55:37 [http-nio-8088-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class java.time.LocalDateTime]]
+2023-02-03 20:01:40 [http-nio-8088-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.laowang.springboot3template.exception.ForbiddenException: 没有权限，访问被拒绝]
+2023-02-03 20:01:43 [http-nio-8088-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.laowang.springboot3template.exception.ForbiddenException: 没有权限，访问被拒绝]
+2023-02-03 20:07:25 [http-nio-8088-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.laowang.springboot3template.exception.ForbiddenException: 没有权限，访问被拒绝]

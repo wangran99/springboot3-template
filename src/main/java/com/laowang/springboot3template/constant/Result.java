@@ -4,7 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//统一返回数据结构
+/**
+ * 统一返回结果返回对象
+ *
+ * @param <T>
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,19 +25,19 @@ public class Result<T> {
         return new Result<>(ResultEnum.SUCCESS.getCode(), message, data);
     }
 
-    public static Result<?> failed() {
-        return new Result<>(ResultEnum.COMMON_FAILED.getCode(), ResultEnum.COMMON_FAILED.getMessage(), null);
+    public static Result<?> fail() {
+        return new Result<>(ResultEnum.OPERATION_ERRO.getCode(), ResultEnum.OPERATION_ERRO.getMessage(), null);
     }
 
-    public static Result<?> failed(String message) {
-        return new Result<>(ResultEnum.COMMON_FAILED.getCode(), message, null);
+    public static Result<?> fail(String message) {
+        return new Result<>(ResultEnum.OPERATION_ERRO.getCode(), message, null);
     }
 
-    public static Result<?> failed(IResult errorResult) {
+    public static Result<?> fail(IResult errorResult) {
         return new Result<>(errorResult.getCode(), errorResult.getMessage(), null);
     }
 
-    public static Result<?> failed(Integer code, String message) {
+    public static Result<?> fail(Integer code, String message) {
         return new Result<>(code, message, null);
     }
 

@@ -16,6 +16,7 @@ public class TestController {
 
     /**
      * 返回字符串
+     *
      * @return 字符串类型
      */
     @GetMapping("hello")
@@ -25,11 +26,12 @@ public class TestController {
 
     /**
      * 返回当前时间
+     *
      * @return
      */
     @GetMapping("time")
     public LocalDateTime time() {
-        LocalDateTime localDateTime= LocalDateTime.now();
+        LocalDateTime localDateTime = LocalDateTime.now();
         return localDateTime;
     }
 
@@ -45,10 +47,11 @@ public class TestController {
 
     /**
      * 返回异常
+     *
      * @return
      */
     @GetMapping("exception")
     public String exception() {
-        throw  new ForbiddenException("没有权限，访问被拒绝");
+        throw new ForbiddenException("没有权限，访问被拒绝");
     }
 }

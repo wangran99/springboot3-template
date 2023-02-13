@@ -2,7 +2,6 @@ package com.laowang.springboot3template.config;
 
 import com.laowang.springboot3template.constant.Result;
 import com.laowang.springboot3template.constant.ResultEnum;
-import com.laowang.springboot3template.exception.ForbiddenException;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -16,14 +15,6 @@ public class ExceptionAdvice {
 
 
     /**
-     * 捕获 {@code ForbiddenException} 异常
-     */
-    @ExceptionHandler({ForbiddenException.class})
-    public Result<?> handleForbiddenException(ForbiddenException ex) {
-        return Result.failed(ResultEnum.FORBIDDEN);
-    }
-
-    /**
      * {@code @RequestBody} 参数校验不通过时抛出的异常处理
      */
     @ExceptionHandler({MethodArgumentNotValidException.class})
@@ -35,9 +26,9 @@ public class ExceptionAdvice {
         }
         String msg = sb.toString();
         if (StringUtils.hasText(msg)) {
-            return Result.failed(ResultEnum.VALIDATE_FAILED.getCode(), msg);
+            return Result.fail(ResultEnum.METHOD_ARGUMENT_NOT_VALID_EXCEPTION.getCode(), msg);
         }
-        return Result.failed(ResultEnum.VALIDATE_FAILED);
+        return Result.fail(ResultEnum.METHOD_ARGUMENT_NOT_VALID_EXCEPTION);
     }
 
 
@@ -46,7 +37,7 @@ public class ExceptionAdvice {
      */
     @ExceptionHandler({Exception.class})
     public Result<?> handle(Exception ex) {
-        return Result.failed(ex.getMessage());
+        return Result.fail(ex.getMessage());
     }
 
 }

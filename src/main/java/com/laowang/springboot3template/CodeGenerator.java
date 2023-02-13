@@ -10,17 +10,18 @@ import java.util.Collections;
 /**
  * 根据数据库的字段自动生成对应的entity,mapper,service等，
  * 减少代码书写次数。需要在代码中设置连接的数据库地址，密码和项目的包名等信息
+ *
  * @author WangRan
  */
 public class CodeGenerator {
-    private static final String url="jdbc:mysql://119.3.164.164:3306/db_datasync?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=true";
-    private static final String username="noticeroot";
-    private static final String password="Chinasoft#123notice";
+    private static final String URL = "jdbc:mysql://119.3.164.164:3306/db_datasync?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=true";
+    private static final String USER_NAME = "noticeroot";
+    private static final String PASSWORD = "Chinasoft#123notice";
 
     public static void main(String[] args) {
         String projectPath = System.getProperty("user.dir");
 
-        FastAutoGenerator.create(url, username, password)
+        FastAutoGenerator.create(URL, USER_NAME, PASSWORD)
                 .globalConfig(builder -> {
                     builder.author("WangRan") // 设置作者
 //                            .enableSwagger() // 开启 swagger 模式

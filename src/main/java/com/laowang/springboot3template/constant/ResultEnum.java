@@ -5,9 +5,13 @@ package com.laowang.springboot3template.constant;
  */
 public enum ResultEnum implements IResult {
     SUCCESS(200, "操作成功"),
+    UNAUTHORIZED(401, "未登录或登录过期"),
+    TOO_MANY_REQUESTS(403, "连接的用户过多"),
+    INTERNAL_SERVER_ERROR(500, "内部服务器错误"),
+
+//    以下是具体的业务相关错误码
     SYSTEM_BUSY(500001, "系统繁忙，请稍候再试"),
     OPERATION_ERRO(500002, "操作失败"),
-
     VERIFICATION(400000, "验证码有误"),
     TOKEN_ERROR(401001, "登录凭证已过期，请重新登录"),
     DATA_ERROR(401003, "传入数据异常"),
@@ -38,10 +42,7 @@ public enum ResultEnum implements IResult {
     DICT_NAME_IS_EXIST(401101, "字典名称已存在"),
 
     DICT_DETAIL_VALUE_NOT_NULL(401102, "字典值不能为空"),
-    DICT_DETAIL_VALUE_IS_EXIST(401103, "字典名称-字典值已存在"),
-
-    APPLICATION_ERROR(402001, "系统不存在"),
-    FAILURE(1005, "操作失败");
+    DICT_DETAIL_VALUE_IS_EXIST(401103, "字典名称-字典值已存在");
 
     private Integer code;
     private String message;

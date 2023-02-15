@@ -32,3 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 /example-log
+/example-dev-log

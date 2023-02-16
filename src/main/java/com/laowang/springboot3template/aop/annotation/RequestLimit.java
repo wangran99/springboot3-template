@@ -9,7 +9,7 @@ import java.lang.annotation.*;
  * 接口请求次数注解
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.METHOD,ElementType.TYPE})
+@Target({ElementType.METHOD, ElementType.TYPE})
 @Documented
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public @interface RequestLimit {

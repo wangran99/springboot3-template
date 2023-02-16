@@ -19,9 +19,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-
 import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
 import java.lang.reflect.Parameter;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
@@ -64,15 +62,15 @@ public class ExceptionAop {
 
         HttpServletRequest request = ((ServletRequestAttributes)
                 RequestContextHolder.getRequestAttributes()).getRequest();
-        String fromUrl = request.getHeader("url");
-        log.error("exception!request page full url:{}", fromUrl);
-        log.error("exception!method full name:{}", getClassAndMethodName(method));
+        String fromUrl = request.getRequestURI();
+        log.error("exception request full url:{}", fromUrl);
+        log.error("exception method full name:{}", getClassAndMethodName(method));
         for (int i = 0; i < parameterNames.length; i++)
             log.error("exception!parameterName:{} = {}", parameterNames[i], args[i] == null ? "null" : args[i].toString());
         if (throwable instanceof RuntimeException)
-            log.error("runtime exception.",throwable);
+            log.error("runtime exception.", throwable);
         else {
-            log.error("not runtime exception",throwable);
+            log.error("not runtime exception", throwable);
         }
         throw throwable instanceof RuntimeException ? (RuntimeException) throwable : new RuntimeException(throwable.getMessage());
     }

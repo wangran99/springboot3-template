@@ -9,6 +9,7 @@ import org.springframework.web.filter.CorsFilter;
 /**
  * 允许跨域。（方便前端人员在本地开发调试，对后端开发无影响）
  * 实现跨域请求的几种方法：https://cloud.tencent.com/developer/article/1513473
+ *
  * @author WangRan
  */
 @Configuration

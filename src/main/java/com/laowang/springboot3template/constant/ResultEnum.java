@@ -9,7 +9,7 @@ public enum ResultEnum implements IResult {
     TOO_MANY_REQUESTS(403, "连接的用户过多"),
     INTERNAL_SERVER_ERROR(500, "内部服务器错误"),
 
-//    以下是具体的业务相关错误码
+    //    以下是具体的业务相关错误码
     SYSTEM_BUSY(500001, "系统繁忙，请稍候再试"),
     OPERATION_ERRO(500002, "操作失败"),
     VERIFICATION(400000, "验证码有误"),

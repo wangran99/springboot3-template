@@ -1,6 +1,5 @@
 package com.laowang.springboot3template.config;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.laowang.springboot3template.constant.Result;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,13 +32,13 @@ public class ResponseAdvice implements ResponseBodyAdvice<Object> {
             return body;
         }
         // 如果返回值是String类型，那就手动把Result对象转换成JSON字符串
-        if (body instanceof String) {
-            try {
-                return objectMapper.writeValueAsString(Result.success(body));
-            } catch (JsonProcessingException e) {
-                throw new RuntimeException(e);
-            }
-        }
+//        if (body instanceof String) {
+//            try {
+//                return objectMapper.writeValueAsString(Result.success(body));
+//            } catch (JsonProcessingException e) {
+//                throw new RuntimeException(e);
+//            }
+//        }
         return Result.success(body);
     }
 }

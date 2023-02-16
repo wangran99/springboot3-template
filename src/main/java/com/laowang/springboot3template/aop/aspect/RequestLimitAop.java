@@ -3,10 +3,7 @@ package com.laowang.springboot3template.aop.aspect;
 
 import com.laowang.springboot3template.aop.annotation.RequestLimit;
 import lombok.extern.slf4j.Slf4j;
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;

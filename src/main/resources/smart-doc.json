@@ -1,5 +1,5 @@
 {
-  "serverUrl": "http://127.0.0.1:8088/rest",//服务器地址
+  "serverUrl": "http://127.0.0.1:8088/rest",//后端接口服务器地址
   "allInOne": true,  //#是否将文档合并到一个文件中，一般推荐为true
   "outPath": "./src/main/resources/static", //指定文档的输出路径
   "createDebugPage": true,//@since 2.0.0 smart-doc支持创建可以测试的html页面，仅在AllInOne模式中起作用。
